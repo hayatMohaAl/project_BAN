@@ -9,7 +9,10 @@ numpy
 pandas
 tensorflow
 keras
-
+nltk
+pickle
+re
+gensim
 
 # tests/linter
 black
