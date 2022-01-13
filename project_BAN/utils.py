@@ -3,6 +3,9 @@ from nltk.corpus import stopwords
 import numpy as np
 import re
 
+
+
+
 def ponctuation_check(tweet):
     score = 0
     for word in tweet.split():

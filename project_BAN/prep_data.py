@@ -1,6 +1,7 @@
 from utils import ponctuation_check
 from utils import capital_word_check
 from utils import clean_data
+import emoji
 
 from utils import embed_sentence_with_TF
 import numpy as np
@@ -10,14 +11,16 @@ import gensim.downloader as api
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras import models
 import re
+
 def create_features(tweet):
     score_punctuation = ponctuation_check(tweet)
     score_capitalization = capital_word_check(tweet)
 
     return np.array([score_punctuation, score_capitalization])
 
-def create_emojis2text(tweet):
-    pass
+def replace_emojis2text(tweet):
+    tweet = (emoji.demojize(tweet, delimiters=(" ", " ")).replace("_",""))
+    return tweet
 
 def tokenize_tweet(tweet):
     tweet_tokenized = clean_data(tweet)

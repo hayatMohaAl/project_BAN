@@ -14,12 +14,14 @@ from nltk.corpus import stopwords
 import numpy as np
 import re
 
-from prep_data import create_features,  tokenize_tweet, embed_tweet
+from prep_data import replace_emojis2text, create_features,  tokenize_tweet, embed_tweet
 
 
 
 def predict_tweet_class(tweet):
     # prep tweet
+
+    tweet = replace_emojis2text(tweet)
     X_features = create_features(tweet)
     tweet_tokenized = tokenize_tweet(tweet)
     tweet_emebedded = embed_tweet(tweet_tokenized)
