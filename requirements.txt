@@ -13,7 +13,7 @@ nltk
 pickle
 re
 gensim
-
+nltk.corpus
 # tests/linter
 black
 coverage
