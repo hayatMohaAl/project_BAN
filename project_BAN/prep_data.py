@@ -26,9 +26,9 @@ def tokenize_tweet(tweet):
 
 def embed_tweet(tweet_tokenized):
     # import w2v trained
-   # with open('../project_BAN/models/word2vec_transfer', 'rb') as handle:
-   #     word2vec_transfer = pickle.load(handle)
-    word2vec_transfer = api.load("glove-twitter-50")
+    with open('../project_BAN/models/word2vec_transfer', 'rb') as handle:
+        word2vec_transfer = pickle.load(handle)
+   # word2vec_transfer = api.load("glove-twitter-50")
 
     # embed
     tweet_emebedded = embed_sentence_with_TF(word2vec_transfer, tweet_tokenized)
