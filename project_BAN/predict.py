@@ -8,7 +8,6 @@ import pickle
 
 from tensorflow.keras.preprocessing.text import text_to_word_sequence
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras import Sequential, layers
 from tensorflow.keras import models
 
 from nltk.corpus import stopwords
@@ -37,9 +36,3 @@ def predict_tweet_class(tweet):
       text_to_print = "hate tweet"
 
     return text_to_print
-
-## questions
-# how to check right version of libraries en requirements
-# __main__ line to add in the end of each *.py
-# make?
-# are the *.py files in the right path
