@@ -7,6 +7,8 @@ raw_data/
 **/__pycache__/
 .env
 
+landingpage
+
 #AJOUT DU CODE DU TEMPLATE STREAMLIT
 
 .streamlit/secrets.toml
@@ -143,3 +145,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+project_BAN/models
